@@ -21,11 +21,11 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
           price_data: {
             currency: "usd",
             product_data: {
-              name: product.title,
+              name: item.title,
             },
-            unit_amount: product.price * 100,
+            unit_amount: item.price * 100,
           },
-          quantity: product.quantity,
+          quantity: item.quantity,
         };
       })
     );
